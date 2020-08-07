@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  display: block;
+  font-family: "Raleway", sans-serif;
+}
+
+.Colors {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.generate {
+  margin-top: 150px;
+}

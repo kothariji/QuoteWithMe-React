@@ -1,0 +1,32 @@
+.contact {
+  padding-top: 60px;
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  color: white;
+}
+
+.conhr {
+  border: 1px solid whitesmoke;
+  border-radius: 200px;
+  width: 500px;
+  align-content: center;
+  margin: 10px 0px 10px 315px;
+}
+
+.madewithlove {
+  margin-top: 60px;
+  font-family: "Poppins";
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.name {
+  font-size: 0.9em;
+}

@@ -1,0 +1,15 @@
+.ColorBox {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.3s;
+}
+
+.ColorBox:hover {
+  height: 110px;
+  width: 110px;
+}
+
+.ColorText {
+  color: white;
+  padding: 35px 15px;
+}

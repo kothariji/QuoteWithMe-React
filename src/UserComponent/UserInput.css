@@ -1,0 +1,8 @@
+.UserInput {
+  margin: 150px auto 60px auto;
+}
+
+.input-group {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #626262, -3px -3px 12px #ffffff;
+}
