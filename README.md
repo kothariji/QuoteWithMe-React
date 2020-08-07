@@ -3,10 +3,12 @@
 
 Checkout Here:- https://quotewithme.herokuapp.com/
 
-A quote maker App, entirely built on React.
+A quote maker App, entirely built on React  :electron:.
 
 
 ### Key Features
-You can dowload the quote template.
-Change the color of the vabckground as well as text.
-Generate a random quote(using API fetch).
+- :trophy: You can dowload the quote template.
+- :trophy: Change the color of the vabckground as well as text.
+- :trophy: Generate a random quote(using API fetch).
+
+
