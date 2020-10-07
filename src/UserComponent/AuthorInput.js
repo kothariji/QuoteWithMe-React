@@ -16,6 +16,7 @@ class AuthorInput extends Component {
           type="text"
           className="form-control"
           aria-label="Default"
+          placeholder="Insert an Author"
           aria-describedby="inputGroup-sizing-default"
           onChange={this.props.changed}
           value={this.props.text}

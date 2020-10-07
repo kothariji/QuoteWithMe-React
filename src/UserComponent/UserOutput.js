@@ -13,7 +13,7 @@ const UserOutput = (props) => {
           }}
         >
           {props.text}
-          {props.showAuthor ? <h6>{props.authorText}</h6> : null}
+          {props.showAuthor && <h6>{props.authorText}</h6> }
         </p>
       </div>
     </div>
