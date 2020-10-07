@@ -22,20 +22,18 @@ const App = () => {
     text: "Chai.   Code.   Cube.",
   });
 
-  const [colorState, setColorState] = useState({
-    colors: [
-      { code: "#1abc9c" },
-      { code: "#2ecc71" },
-      { code: "#3498db" },
-      { code: "#9b59b6" },
-      { code: "#34495e" },
-      { code: "#f1c40f" },
-      { code: "#e67e22" },
-      { code: "#e74c3c" },
-      { code: "#ecf0f1" },
-      { code: "#050505" },
-    ],
-  });
+  const colors = [
+    { code: "#1abc9c" },
+    { code: "#2ecc71" },
+    { code: "#3498db" },
+    { code: "#9b59b6" },
+    { code: "#34495e" },
+    { code: "#f1c40f" },
+    { code: "#e67e22" },
+    { code: "#e74c3c" },
+    { code: "#ecf0f1" },
+    { code: "#050505" },
+  ];
 
   const [backState, setBackState] = useState({
     color: "#f1c40f",
@@ -124,7 +122,7 @@ const App = () => {
           >
             {authorState.author ? <span>Remove</span> : <span>Add</span>} Author
           </button>
-          {authorState.author ? (
+          {authorState.author && (
             <Fragment>
               <br />
               <br />
@@ -134,7 +132,7 @@ const App = () => {
                 changed={handleAuthorNameChange}
               />
             </Fragment>
-          ) : null}
+          )}
           <br />
           <br />
           <br />
@@ -162,30 +160,13 @@ const App = () => {
             </RadioGroup>
           </FormControl>
           <div className="Colors">
-            {colorState.colors.map((color, index) => {
-              if (index < 5)
-                return (
-                  <ColorBox
-                    color={color.code}
-                    changeColor={() => handleColorChange(color.code)}
-                    key={color.code}
-                  />
-                );
-              else return null;
-            })}
-          </div>
-          <div className="Colors">
-            {colorState.colors.map((color, index) => {
-              if (index <= 10 && index >= 5)
-                return (
-                  <ColorBox
-                    color={color.code}
-                    changeColor={() => handleColorChange(color.code)}
-                    key={color.code}
-                  />
-                );
-              else return null;
-            })}
+            {colors.map(({ code }) => (
+              <ColorBox
+                color={code}
+                changeColor={() => handleColorChange(code)}
+                key={code}
+              />
+            ))}
           </div>
         </div>
         <div className="col col-7">
