@@ -20,14 +20,7 @@ class UserInput extends Component {
           ></textarea>
         </div>
       </div>
-      // <div>
-      //   <h1>UserInput</h1>
-      //   <input
-      //     type="text"
-      //     onChange={this.props.changed}
-      //     value={this.props.text}
-      //   ></input>
-      // </div>
+
     );
   }
 }

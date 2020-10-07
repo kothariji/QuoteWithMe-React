@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from "react";
+import React, { useState, Fragment } from "react";
 import UserInput from "./UserComponent/UserInput";
 import UserOutput from "./UserComponent/UserOutput";
 import AuthorInput from "./UserComponent/AuthorInput";
@@ -93,19 +93,6 @@ const App = () => {
       saveAs(blob, "myImage.png");
     });
   };
-  // useEffect(() => {
-  //   fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         console.log(result);
-  //       },
-
-  //       (error) => {
-  //         console.log(error);
-  //       }
-  //     );
-  // }, []);
 
   const getQuote = () => {
     fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
