@@ -14,20 +14,14 @@ class UserInput extends Component {
           <textarea
             className="form-control"
             aria-label="With textarea"
+            placeholder="Insert a Quote"
             onChange={this.props.changed}
             value={this.props.text}
             rows="3"
           ></textarea>
         </div>
       </div>
-      // <div>
-      //   <h1>UserInput</h1>
-      //   <input
-      //     type="text"
-      //     onChange={this.props.changed}
-      //     value={this.props.text}
-      //   ></input>
-      // </div>
+
     );
   }
 }
