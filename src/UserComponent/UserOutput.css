@@ -1,19 +1,22 @@
 #my-node {
-  padding: 10px;
-  margin: 15px;
+	padding: 10px;
+	margin: 15px;
 }
 .UserOuputWindow {
-  margin: 40px auto;
-  width: 480px;
-  height: 480px;
+	margin: 40px auto;
+	width: 480px;
+	height: 480px;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
 }
 
 .WindowText {
-  /*width: 50%;*/
-  /*margin: 50px auto;*/
-  height: 480px;
-  font-size: 1.9em;
-  padding: 175px 25px 200px 25px;
-  border-radius: 50px;
-  box-shadow: 12px 12px 24px #626262, -12px -12px 24px #ffffff;
+	/*width: 50%;*/
+	/*margin: 50px auto;*/
+	height: 480px;
+	font-size: 1.9em;
+	padding: 175px 25px 200px 25px;
+	border-radius: 50px;
+	box-shadow: 12px 12px 24px #626262, -12px -12px 24px #ffffff;
 }
