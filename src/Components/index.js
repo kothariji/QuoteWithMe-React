@@ -1,0 +1,5 @@
+export { default as AuthorInput } from "./AuthorInput/AuthorInput"
+export { default as ColorBox } from "./ColorBox/ColorBox"
+export { default as Footer } from "./Footer/Footer"
+export { default as UserInput } from "./UserInput/UserInput"
+export { default as UserOutput } from "./UserOutput/UserOutput"
