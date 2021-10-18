@@ -12,7 +12,7 @@
 }
 
 .WindowText {
-	/*width: 50%;*/
+	width: inherit;
 	/*margin: 50px auto;*/
 	height: 480px;
 	font-size: 1.9em;
