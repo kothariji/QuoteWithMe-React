@@ -8,8 +8,13 @@
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .generate {
   margin-top: 150px;
+}
+
+.color-picker {
+  cursor: pointer;
 }

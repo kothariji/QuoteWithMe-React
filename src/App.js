@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react"
 import domtoimage from "dom-to-image";
-import { saveAs } from "file-saver";
+import { saveAs } from "file-saver"
+import ColorPicker from 'material-ui-color-picker'
 import {
   FormControl,
   FormControlLabel,
@@ -167,9 +168,21 @@ const App = () => {
                 color={code}
                 changeColor={() => handleColorChange(code)}
                 key={code}
+                className="color-box"
               />
             ))}
           </div>
+          <h5>OR</h5>
+          <h4>
+            Pick a Color
+          </h4>
+          <ColorPicker
+            floatingLabelText={radioState.value === "background" ? backState.color : textColorState.color}
+            variant='outlined'
+            name='color'
+            value={radioState.value === "background" ? backState.color : textColorState.color}
+            onChange={color => handleColorChange(color)}
+          />
         </div>
         <div className="col col-7">
           <button
@@ -178,7 +191,6 @@ const App = () => {
           >
             Generate Random Quote
           </button>
-
           <UserOutput
             text={textState.text}
             authorText={authorTextState.text}
