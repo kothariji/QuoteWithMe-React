@@ -113,7 +113,7 @@ const App = () => {
 
   return (
     <div className="App container-fluid">
-      <h1 className="display-3 mt-5">Quote Maker</h1>
+      <h1 className="display-3 mt-5">Quote With Me</h1>
       <div className="row">
         <div className="col col-1"></div>
         <div className="col col-4">
