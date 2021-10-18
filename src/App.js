@@ -1,8 +1,7 @@
-import React, { useState, Fragment } from "react";
-import UserInput from "./UserComponent/UserInput";
-import UserOutput from "./UserComponent/UserOutput";
-import AuthorInput from "./UserComponent/AuthorInput";
-import ColorBox from "./UserComponent/ColorBox";
+import React, { useState, Fragment } from "react"
+import domtoimage from "dom-to-image";
+import { saveAs } from "file-saver"
+import ColorPicker from 'material-ui-color-picker'
 import {
   FormControl,
   FormControlLabel,
@@ -11,11 +10,16 @@ import {
   RadioGroup,
 } from "@material-ui/core";
 
-import "./App.css";
-import Footer from "./UserComponent/Footer";
 
-import domtoimage from "dom-to-image";
-import { saveAs } from "file-saver";
+import "./App.css";
+import {
+  AuthorInput,
+  ColorBox,
+  Footer,
+  UserInput,
+  UserOutput
+} from "./Components/index"
+
 
 const App = () => {
   const [textState, setTextState] = useState({
@@ -93,15 +97,14 @@ const App = () => {
   };
 
   const getQuote = () => {
-    fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
+    const randomNumber = Math.floor(Math.random() * (1600 - 1 + 1) + 1)
+    fetch("https://type.fit/api/quotes")
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log(result);
-          setTextState({ text: result[0].quote });
-          setAuthorTextState({ text: result[0].character });
+          setTextState({ text: result[randomNumber].text })
+          setAuthorTextState({ text: result[randomNumber].author })
         },
-
         (error) => {
           console.log(error);
         }
@@ -165,9 +168,21 @@ const App = () => {
                 color={code}
                 changeColor={() => handleColorChange(code)}
                 key={code}
+                className="color-box"
               />
             ))}
           </div>
+          <h5>OR</h5>
+          <h4>
+            Pick a Color
+          </h4>
+          <ColorPicker
+            floatingLabelText={radioState.value === "background" ? backState.color : textColorState.color}
+            variant='outlined'
+            name='color'
+            value={radioState.value === "background" ? backState.color : textColorState.color}
+            onChange={color => handleColorChange(color)}
+          />
         </div>
         <div className="col col-7">
           <button
@@ -176,7 +191,6 @@ const App = () => {
           >
             Generate Random Quote
           </button>
-
           <UserOutput
             text={textState.text}
             authorText={authorTextState.text}
